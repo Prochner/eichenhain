@@ -40,6 +40,19 @@ Android und iOS laufen über `flutter run` mit angeschlossenem Gerät oder
 Emulator. Für Windows wird Visual Studio (C++-Desktop-Workload) benötigt, für
 Android das Android SDK, für iOS ein Mac mit Xcode.
 
+## Webversion auf GitHub Pages
+
+Die gebaute Webversion liegt im Ordner `docs/` und ist unter
+https://prochner.github.io/eichenhain/ erreichbar (GitHub: *Settings → Pages →
+Branch `main`, Ordner `/docs`*).
+
+Nach Änderungen am Spiel neu bauen und `docs/` mit committen (in PowerShell):
+
+```powershell
+flutter build web --release --base-href /eichenhain/ -o docs
+New-Item -ItemType File docs/.nojekyll -Force
+```
+
 ## Tests
 
 ```bash
